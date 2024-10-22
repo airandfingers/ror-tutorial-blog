@@ -1,0 +1,20 @@
+<p>
+  <strong>By:</strong>
+  <%= comment.commenter %>
+</p>
+<p>
+  <strong>Posted:</strong>
+  <%= time_ago_in_words(comment.created_at) %> ago
+</p>
+<br />
+<p>
+  <%= comment.body %>
+</p>
+<p>
+  <%= link_to "Destroy Comment", [comment.article, comment], data: {
+                turbo_method: :delete,
+                turbo_confirm: "Are you sure?"
+              } %>
+</p>
+
+<hr />
