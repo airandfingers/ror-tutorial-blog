@@ -1,12 +1,12 @@
 databases:
-  - name: ror-tutorial-blog
-    databaseName: ror-tutorial-blog
-    user: ror-tutorial-blog
+  - name: ror_tutorial_blog
+    databaseName: ror_tutorial_blog
+    user: ror_tutorial_blog
     plan: free
 
 services:
   - type: web
-    name: ror-tutorial-blog
+    name: ror_tutorial_blog
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"
