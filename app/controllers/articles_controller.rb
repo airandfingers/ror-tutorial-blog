@@ -1,6 +1,8 @@
 class ArticlesController < ApplicationController
   include Authentication
 
+  authenticate_with_http_basic except: [:index, :show]
+
   def index
     @articles = Article.all
   end
